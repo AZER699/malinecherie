@@ -1,0 +1,328 @@
+body {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow-x: hidden;
+    color: white;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent url('https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/demo/img/stars.png') repeat top center;
+    animation: starsMove 100s linear infinite;
+    z-index: -1;
+    opacity: 0.4;
+  }
+  
+  @keyframes starsMove {
+    from { transform: translateY(0); }
+    to { transform: translateY(-1000px); }
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff0f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    padding: 40px 0 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    color: #e91e63;
+  }
+  
+  header p {
+    font-style: italic;
+    color: #888;
+  }
+  
+  .message {
+    background: #ffe4ec;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .message h2 {
+    margin-bottom: 15px;
+    color: #c2185b;
+  }
+  
+  .photos {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .photos h2 {
+    margin-bottom: 20px;
+    color: #ad1457;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    object-fit: cover;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: #444;
+  }
+  .audio-player {
+    margin: 20px auto;
+    text-align: center;
+    background: #ffe4ec;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .audio-player p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #ad1457;
+  }
+  
+  .audio-player button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .audio-player button:hover {
+    background-color: #d81b60;
+  }
+  .quote {
+    font-style: italic;
+    color: #c2185b;
+    font-size: 1.2em;
+    margin: 30px auto;
+    text-align: center;
+  }
+  .reponse {
+    margin-top: 50px;
+    padding: 30px;
+    background: #ffe4ec;
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  .reponse h2 {
+    color: #ad1457;
+    margin-bottom: 15px;
+  }
+  
+  .reponse textarea {
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+  
+  .reponse button {
+    margin-top: 10px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .love-title {
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid #ff80ab;
+    font-size: 2em;
+    text-align: center;
+    margin: 30px auto;
+    animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ff80ab }
+  }
+  #surprise-message {
+    margin-top: 40px;
+    font-size: 1.5em;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    color: #ffccdd;
+  }
+  
+  #surprise-message.visible {
+    opacity: 1;
+  }
+  .magic-section {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .magic-section button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  #magic-message {
+    margin-top: 20px;
+    font-size: 1.3em;
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+  
+  #magic-message.visible {
+    opacity: 1;
+  }
+  .magic-section {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .magic-section button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff4d6d;
+    transition: transform 0.2s;
+  }
+  
+  .magic-section button:hover {
+    transform: scale(1.05);
+  }
+  
+  #magic-message {
+    margin-top: 20px;
+    font-size: 1.3em;
+    opacity: 0;
+    transition: opacity 2s ease;
+    color: #ffccdd;
+  }
+  
+  #magic-message.visible {
+    opacity: 1;
+  }
+  
+  .heart-float {
+    position: fixed;
+    font-size: 20px;
+    animation: floatUp 3s ease-out forwards;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  @keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-200px); opacity: 0; }
+  }
+/* Style général du formulaire */
+form {
+    background: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style des champs de saisie */
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    font-size: 1em;
+    transition: border 0.3s ease;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    border: 1px solid #ff4d6d;
+    outline: none;
+  }
+  
+  /* Style du bouton */
+  form button {
+    background-color: #ff4d6d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+  }
+  
+  form button:hover {
+    transform: scale(1.1);
+    background-color: #ff80ab;
+  }
+  
+  /* Ajout d'un petit effet sur le focus du formulaire */
+  form input, form button {
+    transition: all 0.3s ease;
+  }
+  
+  form input:focus, form button:focus {
+    box-shadow: 0 0 5px 2px rgba(255, 80, 171, 0.5);
+  }
+          

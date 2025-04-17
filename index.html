@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pour ma Line d'amour ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="love-title">Totoman ❤️ Maïssam</h1>
+
+    <header>
+      <h1>Pour ma Line d'amour</h1>
+      <p>De ton Totoman 💌</p>
+    </header>
+    <section class="audio-player">
+        <p>🎶 Clique ici pour écouter notre chanson pendant que tu lis ces mots…</p>
+        <button onclick="document.getElementById('maChanson').play()">Lancer la musique</button>
+        <audio id="maChanson" loop>
+          <source src="The Smiths - Back To The Old House (Lyrics) And you never knew, How much I really liked you tiktok.mp3" type="audio/mpeg">
+          Ton navigateur ne supporte pas l’audio.
+        </audio>
+      </section>
+      <section class="quote">
+        <p>« L’amour, ce n’est pas se regarder l’un l’autre, c’est regarder ensemble dans la même direction. »<br>— Antoine de Saint-Exupéry</p>
+      </section>
+      
+    <section class="message">
+      <h2>Je suis désolé, du fond du cœur...</h2>
+      <p>
+        MaÏssam, ma Line d’amour, j’ai fait une erreur et je le reconnais. Je t’ai manqué de respect, et je m’en veux profondément. Tu es la seule que je porte dans mon cœur, la seule que je regarde, la seule pour qui je suis prêt à tout changer. 
+        <br><br>
+        J’ai compris ce que j’ai risqué de perdre, et je ne veux plus jamais te faire de mal. J’ai changé, je prends ma vie en main, je vise haut, et je veux que tu sois à mes côtés dans ce chemin.
+        <br><br>
+        Fais-moi confiance, je suis là pour toi, et je le serai toujours. 
+        Mon cœur t’appartient. 😊
+      </p>
+    </section>
+
+    <section class="photos">
+      <h2>Nos beaux souvenirs 📸</h2>
+      <div class="gallery">
+        <img src="cvggfdgfd.jpg" alt="Souvenir 1" />
+        <img src="190F5883-4F50-4EB9-B648-F5D5D029B5C2-ezgif.com-video-to-gif-converter.gif" alt="Souvenir 2" />
+        <img src="FD2B62FE-B287-4531-8D8E-9737D9C39FFC-ezgif.com-video-to-gif-converter.gif" alt="Souvenir 3" />
+        <img src="issmage.jpg" alt="Souvenir 4" />
+      </div>
+    </section>
+
+    <footer>
+      <p>Je t’aime, aujourd’hui, demain et toujours. 💘<br>— Totoman</p>
+    </footer>
+  </div>
+  <canvas id="heartCanvas"></canvas>
+  <script src="coeurs.js"></script>
+  <section class="reponse">
+    <h2>Dis-moi ce que tu ressens 💌</h2>
+    <form action="https://formspree.io/f/{https://formspree.io/f/mdkerkyq}" method="POST">
+        <input type="text" name="name" placeholder="Ton nom" required>
+        <input type="email" name="email" placeholder="Ton email" required>
+        <textarea name="message" placeholder="Ton message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      
+  </section>
+  <div id="surprise-message" class="hidden">
+    Et si tu savais à quel point je t’aime Line...❤️
+  </div>
+  <section class="magic-section">
+    <button onclick="showLove()">Clique ici si tu veux savoir à quel point je t’aime 💘</button>
+    <p id="magic-message" class="hidden">J'ai prévu encore pleins de choses so wait my love 💗</p>
+  </section>
+  <script>
+    function showLove() {
+      const msg = document.getElementById("magic-message");
+      msg.classList.add("visible");
+    
+      for (let i = 0; i < 40; i++) {
+        const heart = document.createElement("div");
+        heart.classList.add("heart-float");
+        heart.innerText = "❤️";
+    
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.top = Math.random() * 100 + "vh";
+        heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+        heart.style.color = ["#ff4d6d", "#ff80ab", "#ffccd5"][Math.floor(Math.random() * 3)];
+    
+        document.body.appendChild(heart);
+    
+        setTimeout(() => {
+          heart.remove();
+        }, 3000);
+      }
+    }
+    </script>
+          
+</body>
+</html>
